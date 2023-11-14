@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repositorio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <script>
+        function copiarCodigo(codigoId) {
+            // Selecciona el texto del código
+            var codigoText = document.getElementById(codigoId);
+            var codigo = codigoText.textContent;
+            
+            // Crea un área de texto temporal
+            var tempInput = document.createElement("textarea");
+            tempInput.value = codigo;
+            document.body.appendChild(tempInput);
+            
+            // Selecciona y copia el contenido del área de texto temporal
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Puedes agregar lógica adicional, como mostrar un mensaje de éxito
+            alert("Código copiado al portapapeles");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">REPOSITORIO HELLER ANDRES JAIMES GELVEZ 01220371028</span>
+            <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1rem;" onclick="regresarPaginaPrincipal()">Regresar a la Página Principal</a>
+            <script>
+                function regresarPaginaPrincipal() {
+                    // Redirige a la página principal (puedes cambiar "index.html" por el nombre de tu archivo principal)
+                    window.location.href = "inicio.html";
+                }
+            </script>
+        </div>
+        <script>
+            function irParcial1() {
+                // Redirige a la página principal (puedes cambiar "index.html" por el nombre de tu archivo principal)
+                window.location.href = "parcial1.html";
+            }
+        </script>
+    </nav>
+    <div class="container mt-5" id="paginaPrincipal">
+        <h1 class="text-center">Bienvenido Usuario al primer corte, acontinuación tendrá los ejercicios realizados en clase</h1>
+        <br>
+        <br>
+        <br>
+        <!-- Ejercicio 1 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Ejercicio #1
+                </button>
+            </h2>
+            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1"
+            data-bs-parent="#accordionFlushExample1">
+            <!-- Contenedor del código -->
+            <div id="codigo-container1">
+                <div id="codigo-container1">
+                    <code id="codigo-text1"> <pre>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        int main() {
+                            double num1, num2;
+                            std::cout &lt;&lt; "Ingrese el primer numero \n";
+                            std::cin &gt;&gt; num1;
+                            
+                            std::cout &lt;&lt; "Ingrese el segundo dato( si es division debe ser mayor a 0)\n";
+                            std::cin &gt;&gt; num2;
+                            
+                            double suma=num1+num2;
+                            double resta=num1-num2;
+                            double multiplicar=num1*num2;
+                            double division=num1/num2;
+                            
+                            std::cout &lt;&lt; "\nEl resultado de la suma es: " &lt;&lt; suma;
+                            std::cout &lt;&lt; "\nEl resultado de la resta es:" &lt;&lt; resta;
+                            std::cout &lt;&lt; "\nEl resultado de la multiplicar es: " &lt;&lt; multiplicar;
+                            std::cout &lt;&lt; "\nEl resultado de la dividir es: " &lt;&lt; division;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn1" class="btn btn-primary"
+            onclick="copiarCodigo('codigo-text1')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejercicio 2 -->
+<div class="accordion accordion-flush" id="accordionFlushExample2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
+            Ejercicio #2
+        </button>
+    </h2>
+    <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2"
+    data-bs-parent="#accordionFlushExample2">
+    <!-- Contenedor del código -->
+    <div id="codigo-container2">
+        <code id="codigo-text2">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    double nUSD, TRM;
+                    cout &lt;&lt; "Ingrese el numero de dolares a convertir \n";
+                    cin &gt;&gt; nUSD;
+                    
+                    cout &lt;&lt; "Ingrese el segundo dato el tmr actual\n";
+                    cin &gt;&gt; TRM;
+                    
+                    double COP = nUSD * TRM;
+                    
+                    cout &lt;&lt; "\nUsted tiene en peso colombianos un total de : " &lt;&lt; COP;
+                }
+            </pre></code>
+        </div>
+        <!-- Botón para copiar el código -->
+        <button id="copiar-btn2" class="btn btn-primary"
+        onclick="copiarCodigo('codigo-text2')">Copiar Código</button>
+    </div>
+</div>
+</div>
+
+<!-- Ejercicio 3 -->
+<div class="accordion accordion-flush" id="accordionFlushExample3">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne3">
+            Ejercicio #3
+        </button>
+    </h2>
+    <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3"
+    data-bs-parent="#accordionFlushExample3">
+    <!-- Contenedor del código -->
+    <div id="codigo-container3">
+        <code id="codigo-text3">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    int nDIAS;
+                    cout &lt;&lt; "Ingrese el numero de dias a convertir \n";
+                    cin &gt;&gt; nDIAS;
+                    
+                    double minutos = nDIAS * 1440;
+                    double segundos = nDIAS * 86400;
+                    
+                    cout &lt;&lt; "\nEl numero de minutos es : " &lt;&lt; minutos;
+                    cout &lt;&lt; "\nEl numero de segundos es : " &lt;&lt; segundos;
+                    
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn3" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text3')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 4 -->
+<div class="accordion accordion-flush" id="accordionFlushExample4">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne4">
+            Ejercicio #4
+        </button>
+    </h2>
+    <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4"
+    data-bs-parent="#accordionFlushExample4">
+    <!-- Contenedor del código -->
+    <div id="codigo-container4">
+        <code id="codigo-text4">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    float celsius;
+                    cout &lt;&lt; "Ingrese el numero de grados farenheit \n";
+                    cin &gt;&gt; celsius;
+                    
+                    float kelvin = celsius + (27315 / 100);
+                    
+                    cout &lt;&lt; "\nLa converion a grados kelvin es : " &lt;&lt; kelvin;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn4" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text4')">Copiar Código</button>
+</div>
+</div>
+</div>    
+
+<!-- Ejercicio 5 -->
+<div class="accordion accordion-flush" id="accordionFlushExample5">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne5" aria-expanded="false" aria-controls="flush-collapseOne5">
+            Ejercicio #5
+        </button>
+    </h2>
+    <div id="flush-collapseOne5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne5"
+    data-bs-parent="#accordionFlushExample5">
+    <!-- Contenedor del código -->
+    <div id="codigo-container5">
+        <code id="codigo-text5">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    float f;
+                    cout &lt;&lt; "Ingrese el numero de grados farenheit \n";
+                    cin &gt;&gt; f;
+                    
+                    float celsius = (f - 32) * 5 / 9;
+                    
+                    cout &lt;&lt; "\nLa converion a grados celsius es : " &lt;&lt; celsius;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn5" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text5')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio 6 -->
+<div class="accordion accordion-flush" id="accordionFlushExample6">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne6" aria-expanded="false" aria-controls="flush-collapseOne6">
+            Ejercicio #6
+        </button>
+    </h2>
+    <div id="flush-collapseOne6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne6"
+    data-bs-parent="#accordionFlushExample6">
+    <!-- Contenedor del código -->
+    <div id="codigo-container6">
+        <code id="codigo-text6">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    int edad;
+                    cout &lt;&lt; "Ingrese la edad de la persona: ";
+                    cin &gt;&gt; edad;
+                    
+                    if (edad > 0 && edad &lt; 18) {
+                        cout &lt;&lt; "La persona es menor de edad." &lt;&lt; endl;
+                    }
+                    if (edad &gt;= 18 && edad &lt; 118) {
+                        cout &lt;&lt; "La persona es mayor de edad." &lt;&lt; endl;
+                    }
+                    if (edad &gt; 119) {
+                        cout &lt;&lt; "La persona está en la tumba" &lt;&lt; endl;
+                    }
+                    
+                    return 0;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn6" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text6')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio casa1 -->
+<div class="accordion accordion-flush" id="accordionFlushExamplec7">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOnec7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOnec7" aria-expanded="false" aria-controls="flush-collapseOnec7">
+            Ejercicio #Casa1
+        </button>
+    </h2>
+    <div id="flush-collapseOnec7" class="accordion-collapse collapse" aria-labelledby="flush-headingOnec7"
+    data-bs-parent="#accordionFlushExamplec7">
+    <!-- Contenedor del código -->
+    <div id="codigo-containerc7">
+        <code id="codigo-textc7">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    double precio;
+                    cout &lt;&lt; "Ingrese el precio original: ";
+                    cin &gt;&gt; precio;
+                    
+                    double IVA = precio * (19.0 / 100.0);
+                    double TOTALIVA = precio + IVA;
+                    cout &lt;&lt; "\nEl total es : " &lt;&lt; TOTALIVA;
+                    return 0;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btnc7" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-textc7')">Copiar Código</button>
+</div>
+</div>
+</div>                                    
+<!-- Ejercicio 7 -->
+<div class="accordion accordion-flush" id="accordionFlushExample7">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne7" aria-expanded="false" aria-controls="flush-collapseOne7">
+            Ejercicio #7
+        </button>
+    </h2>
+    <div id="flush-collapseOne7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne7"
+    data-bs-parent="#accordionFlushExample7">
+    <!-- Contenedor del código -->
+    <div id="codigo-container7">
+        <code id="codigo-text7">
+            <pre>
+                #include &lt;iostream&gt;
+                #include &lt;cmath&gt;
+                using namespace std;
+                
+                int main() {
+                    int respuesta;
+                    cout &lt;&lt; "Ingrese un número (1 para Hallar Hipotenusa, 2 para Cateto Adyacente, 3 para Cateto Opuesto): ";
+                    cin &gt;&gt; respuesta;
+                    
+                    double catetoA, catetoB, hipotenusa;
+                    
+                    if (respuesta == 1) {
+                        cout &lt;&lt; "Por favor Ingrese la longitud del cateto A: ";
+                        cin &gt;&gt; catetoA;
+                        cout &lt;&lt; "Por favor Ingrese la longitud del cateto B: ";
+                        cin &gt;&gt; catetoB;
+                        hipotenusa = sqrt(catetoA * catetoA + catetoB * catetoB);
+                        cout &lt;&lt; "La hipotenusa es: " &lt;&lt; hipotenusa &lt;&lt; endl;
+                    } 
+                    else if (respuesta == 2) {
+                        cout &lt;&lt; "Por favor Ingrese la longitud del cateto B: ";
+                        cin &gt;&gt; catetoB;
+                        cout &lt;&lt; "Por favor Ingrese la longitud de la hipotenusa: ";
+                        cin &gt;&gt; hipotenusa;
+                        catetoA = sqrt(hipotenusa * hipotenusa - catetoB * catetoB);
+                        cout &lt;&lt; "El cateto A es: " &lt;&lt; catetoA &lt;&lt; endl;
+                    } 
+                    else if (respuesta == 3) {
+                        cout &lt;&lt; "Por favor Ingrese la longitud del cateto A: ";
+                        cin &gt;&gt; catetoA;
+                        cout &lt;&lt; "Por favor Ingrese la longitud de la hipotenusa: ";
+                        cin &gt;&gt; hipotenusa;
+                        catetoB = sqrt(hipotenusa * hipotenusa - catetoA * catetoA);
+                        cout &lt;&lt; "El cateto B es: " &lt;&lt; catetoB &lt;&lt; endl;
+                    } 
+                    else {
+                        cout &lt;&lt; "Opción no válida." &lt;&lt; endl;
+                    }
+                    
+                    return 0;
+                }
+                
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn7" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text7')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio 8 -->
+<div class="accordion accordion-flush" id="accordionFlushExample8">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne8" aria-expanded="false" aria-controls="flush-collapseOne8">
+            Ejercicio #8
+        </button>
+    </h2>
+    <div id="flush-collapseOne8" class="accordion-collapse collapse" aria-labelledby="flush-headingOne8"
+    data-bs-parent="#accordionFlushExample8">
+    <!-- Contenedor del código -->
+    <div id="codigo-container8">
+        <code id="codigo-text8">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    double p1, p2, p3, notaFinal;
+                    
+                    cout &lt;&lt; "Ingrese la nota del corte 1 (p1): ";
+                    cin &gt;&gt; p1;
+                    cout &lt;&lt; "Ingrese la nota del corte 2 (p2): ";
+                    cin &gt;&gt; p2;
+                    cout &lt;&lt; "Ingrese la nota del corte 3 (p3): ";
+                    cin &gt;&gt; p3;
+                    notaFinal = 0.3 * p1 + 0.3 * p2 + 0.4 * p3;
+                    
+                    cout &lt;&lt; "La nota final del curso de programación es: " &lt;&lt; notaFinal;
+                    
+                    return 0;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn8" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text8')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio 9 -->
+<div class="accordion accordion-flush" id="accordionFlushExample9">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne9">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne9" aria-expanded="false" aria-controls="flush-collapseOne9">
+            Ejercicio #9
+        </button>
+    </h2>
+    <div id="flush-collapseOne9" class="accordion-collapse collapse" aria-labelledby="flush-headingOne9"
+    data-bs-parent="#accordionFlushExample9">
+    <!-- Contenedor del código -->
+    <div id="codigo-container9">
+        <code id="codigo-text9">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    int num1, num2, num3;
+                    
+                    cout &lt;&lt; "Ingrese el primer número: ";
+                    cin &gt;&gt; num1;
+                    cout &lt;&lt; "Ingrese el segundo número: ";
+                    cin &gt;&gt; num2;
+                    cout &lt;&lt; "Ingrese el tercer número: ";
+                    cin &gt;&gt; num3;
+                    
+                    int opcion;
+                    cout &lt;&lt; "Seleccione la opción:" &lt;&lt; endl
+                    &lt;&lt; "1. De mayor a menor" &lt;&lt; endl
+                    &lt;&lt; "2. De menor a mayor" &lt;&lt; endl;
+                    cin &gt;&gt; opcion;
+                    
+                    int mayor, medio, menor;
+                    
+                    mayor = max(num1, max(num2, num3));
+                    menor = min(num1, min(num2, num3));
+                    medio = num1 + num2 + num3 - mayor - menor;
+                    
+                    if (opcion == 1) {
+                        cout &lt;&lt; "De mayor a menor: " &lt;&lt; mayor &lt;&lt; ", " &lt;&lt; medio &lt;&lt; ", " &lt;&lt; menor
+                        &lt;&lt; endl;
+                    } else if (opcion == 2) {
+                        cout &lt;&lt; "De menor a mayor: " &lt;&lt; menor &lt;&lt; ", " &lt;&lt; medio &lt;&lt; ", " &lt;&lt; mayor
+                        &lt;&lt; endl;
+                    } else {
+                        cout &lt;&lt; "Opción no válida." &lt;&lt; endl;
+                    }
+                    return 0;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn9" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text9')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+
+<!-- Ejercicio 10 -->
+<div class="accordion accordion-flush" id="accordionFlushExample10">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne10">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne10" aria-expanded="false" aria-controls="flush-collapseOne10">
+            Ejercicio #10
+        </button>
+    </h2>
+    <div id="flush-collapseOne10" class="accordion-collapse collapse" aria-labelledby="flush-headingOne10"
+    data-bs-parent="#accordionFlushExample10">
+    <!-- Contenedor del código -->
+    <div id="codigo-container10">
+        <code id="codigo-text10">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    int n1, n2;
+                    
+                    cout &lt;&lt; "Este programa permite calcular el valor absoluto de un numero";
+                    cout &lt;&lt; "Ingrese el numero a evaluar: ";
+                    cin &gt;&gt; n1;
+                    
+                    if (n1 &gt;= 0) {
+                        cout &lt;&lt; "El valor absoluto de " &lt;&lt; n1 &lt;&lt; " es " &lt;&lt; n1;
+                    }
+                    if (n1 &lt; 0) {
+                        n2 = n1 * (-1);
+                        cout &lt;&lt; "El valor absoluto de " &lt;&lt; n1 &lt;&lt; " es " &lt;&lt; n2;
+                    }
+                }
+                
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn10" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text10')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+
+<!-- Ejercicio 11 -->
+<div class="accordion accordion-flush" id="accordionFlushExample11">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne11">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne11" aria-expanded="false" aria-controls="flush-collapseOne11">
+            Ejercicio #11
+        </button>
+    </h2>
+    <div id="flush-collapseOne11" class="accordion-collapse collapse" aria-labelledby="flush-headingOne11"
+    data-bs-parent="#accordionFlushExample11">
+    <!-- Contenedor del código -->
+    <div id="codigo-container11">
+        <code id="codigo-text11">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    int n1;
+                    std::cout&lt;&lt;"Este programa calcula el dia de la semana dado un numero del 1 al 7\n";
+                    std::cout&lt;&lt;"Ingrese un numero teniendo en cuenta lo siguiente 1)lunes 2)Martes 3)Miercoles 4)Jueves 5)Viernes 6)Sabado 7)Domingo\n";
+                    std::cin&gt;&gt;n1;
+                    
+                    switch(n1){
+                        case 1:
+                        std::cout&lt;&lt;"El dia es Lunes\n";
+                        break;
+                        case 2:
+                        std::cout&lt;&lt;"El dia es Martes\n";
+                        break;
+                        case 3:
+                        std::cout&lt;&lt;"El dia es Miercoles\n";
+                        break;
+                        case 4:
+                        std::cout&lt;&lt;"El dia es Jueves\n";
+                        break;
+                        case 5:
+                        std::cout&lt;&lt;"El dia es Viernes\n";
+                        break;
+                        case 6:
+                        std::cout&lt;&lt;"El dia es Sabado\n";
+                        break;
+                        case 7:
+                        std::cout&lt;&lt;"El dia es Domingo\n";
+                        break;
+                        default:
+                        std::cout&lt;&lt;"El numero ingresado no es valido\n";
+                    }
+                }  
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn11" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text11')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+
+<a href="#" class="btn btn-primary" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1rem;" onclick="irParcial1()">Parcial 1</a>
+
+</body>
+</html>

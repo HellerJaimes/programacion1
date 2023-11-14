@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repositorio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <script>
+        function copiarCodigo(codigoId) {
+            // Selecciona el texto del código
+            var codigoText = document.getElementById(codigoId);
+            var codigo = codigoText.textContent;
+            
+            // Crea un área de texto temporal
+            var tempInput = document.createElement("textarea");
+            tempInput.value = codigo;
+            document.body.appendChild(tempInput);
+            
+            // Selecciona y copia el contenido del área de texto temporal
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Puedes agregar lógica adicional, como mostrar un mensaje de éxito
+            alert("Código copiado al portapapeles");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">REPOSITORIO HELLER ANDRES JAIMES GELVEZ 01220371028</span>
+            <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1rem;" onclick="regresarPaginaPrincipal()">Regresar a la Página Principal</a>
+            <script>
+                function regresarPaginaPrincipal() {
+                    // Redirige a la página principal (puedes cambiar "index.html" por el nombre de tu archivo principal)
+                    window.location.href = "inicio.html";
+                }
+            </script>
+        </div>
+    </nav>
+    <div class="container mt-5" id="paginaPrincipal">
+        <h1 class="text-center">Bienvenido Usuario al segundo parcial, acontinuación tendrá los ejercicios realizados en clase</h1>
+        <br>
+        <br>
+        <br>
+        <!-- Ejercicio p1 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Ejercicio Parcial #1
+                </button>
+            </h2>
+            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1"
+            data-bs-parent="#accordionFlushExample1">
+            <!-- Contenedor del código -->
+            <div id="codigo-container1">
+                <code id="codigo-text1">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        
+                        int main() {
+                            int numeroVentas;
+                            double sumaTotal = 0;
+                            
+                            std::cout &lt;&lt; "Ejercicio 1\n";
+                            std::cout &lt;&lt; "Ingrese el número de ventas realizadas en una semana: ";
+                            std::cin &gt;&gt; numeroVentas;
+                            
+                            for (int i = 1; i <= numeroVentas; ++i) {
+                                double ventas;
+                                std::cout &lt;&lt; "Ingrese el monto de la venta " &lt;&lt; i &lt;&lt; ": ";
+                                std::cin &gt;&gt; ventas;
+                                sumaTotal += ventas;
+                            }
+                            
+                            std::cout &lt;&lt; "La suma total de las ventas es: " &lt;&lt; sumaTotal;
+                            
+                            return 0;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn1" class="btn btn-primary"
+            onclick="copiarCodigo('codigo-text1')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejercicio 2 -->
+<div class="accordion accordion-flush" id="accordionFlushExample2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
+            Ejercicio Parcial #2
+        </button>
+    </h2>
+    <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2"
+    data-bs-parent="#accordionFlushExample2">
+    <!-- Contenedor del código -->
+    <div id="codigo-container2">
+        <code id="codigo-text2">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    int i;
+                    
+                    std::cout &lt;&lt; "Ejercicio 2\n";
+                    std::cout &lt;&lt; "Ingrese el número del cual quiere la tabla de multiplicar: ";
+                    std::cin &gt;&gt; i;
+                    
+                    for (int j = 1; j &lt;= 10; j++) {
+                        int resultado = i * j;
+                        std::cout &lt;&lt; i &lt;&lt; " x " &lt;&lt; j &lt;&lt; " = " &lt;&lt; resultado &lt;&lt; "\n";
+                    }
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn2" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text2')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 3 -->
+<div class="accordion accordion-flush" id="accordionFlushExample3">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne3">
+            Ejercicio Parcial #3
+        </button>
+    </h2>
+    <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3"
+    data-bs-parent="#accordionFlushExample3">
+    <!-- Contenedor del código -->
+    <div id="codigo-container3">
+        <code id="codigo-text3">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    int numCalificaciones = 5;
+                    double suma = 0;
+                    
+                    for (int i = 0; i &lt; numCalificaciones; ++i) {
+                        double calificacion;
+                        std::cout &lt;&lt; "Ingrese la calificación " &lt;&lt; (i + 1) &lt;&lt; ": ";
+                        std::cin &gt;&gt; calificacion;
+                        suma += calificacion;
+                    }
+                    
+                    double promedio = suma / numCalificaciones;
+                    std::cout &lt;&lt; "El promedio de las calificaciones es: " &lt;&lt; promedio;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn3" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text3')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 4 -->
+<div class="accordion accordion-flush" id="accordionFlushExample4">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne4">
+            Ejercicio Parcial #4
+        </button>
+    </h2>
+    <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4"
+    data-bs-parent="#accordionFlushExample4">
+    <!-- Contenedor del código -->
+    <div id="codigo-container4">
+        <code id="codigo-text4">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    std::cout &lt;&lt; "Ejercicios 4\n";
+                    std::cout &lt;&lt; "Imprime el factorial de num\n";
+                    
+                    int num, factorial, i;
+                    std::cin &gt;&gt; num;
+                    
+                    factorial = 1;
+                    
+                    for (i = 1; i &lt;= num; i++) {
+                        factorial = factorial * i;
+                    }
+                    
+                    std::cout &lt;&lt; "El factorial de " &lt;&lt; num &lt;&lt; " es " &lt;&lt; factorial &lt;&lt; "\n";
+                }
+            </pre>
+            </code>
+        </div>
+        <!-- Botón para copiar el código -->
+        <button id="copiar-btn4" class="btn btn-primary"
+        onclick="copiarCodigo('codigo-text4')">Copiar Código</button>
+    </div>
+</div>
+</div>    
+
+<!-- Ejercicio 5 -->
+<div class="accordion accordion-flush" id="accordionFlushExample5">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne5" aria-expanded="false" aria-controls="flush-collapseOne5">
+            Ejercicio Parcial #5
+        </button>
+    </h2>
+    <div id="flush-collapseOne5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne5"
+    data-bs-parent="#accordionFlushExample5">
+    <!-- Contenedor del código -->
+    <div id="codigo-container5">
+        <code id="codigo-text5">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    int i;
+                    
+                    std::cout &lt;&lt; "Imprime los números pares\n";
+                    
+                    for (i = 0; i &lt;= 100; i += 2) {
+                        std::cout &lt;&lt; i &lt;&lt; "\n";
+                    }
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn5" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text5')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio 6 -->
+<div class="accordion accordion-flush" id="accordionFlushExample6">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne6" aria-expanded="false" aria-controls="flush-collapseOne6">
+            Ejercicio parcial #6
+        </button>
+    </h2>
+    <div id="flush-collapseOne6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne6"
+    data-bs-parent="#accordionFlushExample6">
+    <!-- Contenedor del código -->
+    <div id="codigo-container6">
+        <code id="codigo-text6">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    std::cout &lt;&lt; "Ejercicio de un número elevado a un exponente\n";
+                    
+                    int i, n, e, j = 1;
+                    
+                    std::cout &lt;&lt; "Ingrese el número base\n";
+                    std::cin &gt;&gt; n;
+                    
+                    std::cout &lt;&lt; "Ingrese el número exponente\n";
+                    std::cin &gt;&gt; e;
+                    
+                    for (i = 0; i &lt; e; i++) {
+                        std::cout &lt;&lt; n &lt;&lt; "\n";
+                        j *= n;
+                    }
+                    
+                    std::cout &lt;&lt; j &lt;&lt; "\n";
+                }
+            </pre>  
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn6" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text6')">Copiar Código</button>
+</div>
+</div>
+</div>                                    
+<!-- Ejercicio 7 -->
+<div class="accordion accordion-flush" id="accordionFlushExample7">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne7" aria-expanded="false" aria-controls="flush-collapseOne7">
+            Ejercicio Parcial #7
+        </button>
+    </h2>
+    <div id="flush-collapseOne7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne7"
+    data-bs-parent="#accordionFlushExample7">
+    <!-- Contenedor del código -->
+    <div id="codigo-container7">
+        <code id="codigo-text7">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                int main() {
+                    std::cout &lt;&lt; "Ejercicio de un número elevado a un exponente\n";
+                    
+                    int i, n, e, j = 1;
+                    
+                    std::cout &lt;&lt; "Ingrese el número base\n";
+                    std::cin &gt;&gt; n;
+                    
+                    std::cout &lt;&lt; "Ingrese el número exponente\n";
+                    std::cin &gt;&gt; e;
+                    
+                    for (i = 0; i &lt; e; i++) {
+                        std::cout &lt;&lt; n &lt;&lt; "\n";
+                        j *= n;
+                    }
+                    
+                    std::cout &lt;&lt; j &lt;&lt; "\n";
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn7" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text7')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample61">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne61">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne61" aria-expanded="false" aria-controls="flush-collapseOne61">
+                Ejercicio parcial #8
+            </button>
+        </h2>
+        <div id="flush-collapseOne61" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne61" data-bs-parent="#accordionFlushExample61">
+            <!-- Contenedor del código -->
+            <div id="codigo-container61">
+                <code id="codigo-text61">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        #include &lt;string&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio contar vocales\n";
+
+                            int j;
+                            std::string cadena;
+                            int num_vocales = 0;
+
+                            std::cout &lt;&lt; "Ingrese una cadena de texto: ";
+                            std::getline(std::cin, cadena);
+
+                            int longitud = cadena.length();
+                            for (j = 0; j &lt; longitud; j++) {
+                                char caracter = cadena[j];
+                                switch (caracter) {
+                                    case 'a':
+                                    case 'e':
+                                    case 'i':
+                                    case 'o':
+                                    case 'u':
+                                    case 'A':
+                                    case 'E':
+                                    case 'I':
+                                    case 'O':
+                                    case 'U':
+                                        num_vocales++;
+                                        break;
+                                }
+                            }
+
+                            std::cout &lt;&lt; "Número de vocales: " &lt;&lt; num_vocales &lt;&lt; "\n";
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn61" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text61')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample62">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne62">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne62" aria-expanded="false" aria-controls="flush-collapseOne62">
+                Ejercicio parcial #9
+            </button>
+        </h2>
+        <div id="flush-collapseOne62" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne62" data-bs-parent="#accordionFlushExample62">
+            <!-- Contenedor del código -->
+            <div id="codigo-container62">
+                <code id="codigo-text62">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para obtener los primeros 10 números primos\n";
+
+                            int i, j, contadorprimos = 0;
+                            for (i = 2; contadorprimos &lt; 10; i++) {
+                                int Primo = 0;
+                                for (j = 2; j &lt;= i / 2; j++) {
+                                    if (i % j == 0) {
+                                        Primo = 1;
+                                        break;
+                                    }
+                                }
+                                if (Primo == 0) {
+                                    std::cout &lt;&lt; i &lt;&lt; "\n";
+                                    contadorprimos++;
+                                }
+                            }
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn62" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text62')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample63">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne63">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne63" aria-expanded="false" aria-controls="flush-collapseOne63">
+                Ejercicio parcial #10
+            </button>
+        </h2>
+        <div id="flush-collapseOne63" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne63" data-bs-parent="#accordionFlushExample63">
+            <!-- Contenedor del código -->
+            <div id="codigo-container63">
+                <code id="codigo-text63">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para obtener el saldo en 5 años\n";
+
+                            int i;
+                            double saldo = 0, interes = 0, inversion = 1000;
+
+                            for (i = 0; i &lt; 5; i++) {
+                                interes = (inversion * 0.05);
+                                inversion = inversion + interes;
+                                saldo = inversion;
+                            }
+
+                            std::cout << "El saldo en 5 años es: " << saldo;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn63" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text63')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample64">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne64">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne64" aria-expanded="false" aria-controls="flush-collapseOne64">
+                Ejercicio parcial #11
+            </button>
+        </h2>
+        <div id="flush-collapseOne64" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne64" data-bs-parent="#accordionFlushExample64">
+            <!-- Contenedor del código -->
+            <div id="codigo-container64">
+                <code id="codigo-text64">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        #include &lt;cstdlib&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para adivinar un número del 1 al 100\n";
+
+                            int i, num;
+                            srand(time(0));
+                            i = rand() % 100 + 1;
+
+                            std::cout << "Adivine un número del 1 al 100\n";
+                            std::cin >> num;
+
+                            while (i != num) {
+                                if (num < i) {
+                                    std::cout << "Tu número es menor\n";
+                                    std::cin >> num;
+                                }
+
+                                if (num > i) {
+                                    std::cout << "Tu número es mayor\n";
+                                    std::cin >> num;
+                                }
+
+                                if (num == i) {
+                                    break;
+                                }
+                            }
+
+                            std::cout << "¡Felicidades, adivinaste el número!";
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn64" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text64')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample65">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne65">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne65" aria-expanded="false" aria-controls="flush-collapseOne65">
+                Ejercicio parcial #12
+            </button>
+        </h2>
+        <div id="flush-collapseOne65" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne65" data-bs-parent="#accordionFlushExample65">
+            <!-- Contenedor del código -->
+            <div id="codigo-container65">
+                <code id="codigo-text65">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para dividir un número hasta que se divida en 0\n";
+
+                            double base, divisor;
+
+                            std::cout &lt;&lt; "Ingrese un número base: ";
+                            std::cin &gt;&gt; base;
+
+                            std::cout &lt;&lt; "Ingrese un número divisor: ";
+                            std::cin &gt;&gt; divisor;
+
+                            while (divisor != 0) {
+                                base = base / divisor;
+                                std::cout &lt;&lt; "Resultado de la división: " &lt;&lt; base &lt;&lt; "\n";
+
+                                std::cout &lt;&lt; "Ingrese un número divisor: ";
+                                std::cin &gt;&gt; divisor;
+                            }
+
+                            std::cout &lt;&lt; "Proceso terminado";
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn65" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text65')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample66">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne66">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne66" aria-expanded="false" aria-controls="flush-collapseOne66">
+                Ejercicio parcial #13
+            </button>
+        </h2>
+        <div id="flush-collapseOne66" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne66" data-bs-parent="#accordionFlushExample66">
+            <!-- Contenedor del código -->
+            <div id="codigo-container66">
+                <code id="codigo-text66">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para la serie de Fibonacci\n";
+
+                            int n;
+                            std::cout &lt;&lt; "Ingrese el número de datos que quiere en la lista: ";
+                            std::cin &gt;&gt; n;
+
+                            int i = 2, a = 0, b = 1, c = 0;
+
+                            while (i <= n) {
+                                i++;
+                                a = b;
+                                b = c;
+                                c = a + b;
+                                std::cout &lt;&lt; c << " ,";
+                            }
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn66" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text66')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample67">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne67">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne67" aria-expanded="false" aria-controls="flush-collapseOne67">
+                Ejercicio parcial #14
+            </button>
+        </h2>
+        <div id="flush-collapseOne67" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne67" data-bs-parent="#accordionFlushExample67">
+            <!-- Contenedor del código -->
+            <div id="codigo-container67">
+                <code id="codigo-text67">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio cuenta regresiva de un número n\n";
+
+                            int n, i;
+                            std::cout &lt;&lt; "Ingrese el número para la cuenta regresiva: ";
+                            std::cin &gt;&gt; n;
+
+                            i = n;
+                            while (i == n) {
+                                i--;
+
+                                if (i != 0) {
+                                    n = i;
+                                    std::cout &lt;&lt; i << "\n";
+                                }
+                            }
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn67" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text67')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample68">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne68">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne68" aria-expanded="false" aria-controls="flush-collapseOne68">
+                Ejercicio parcial #15
+            </button>
+        </h2>
+        <div id="flush-collapseOne68" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne68" data-bs-parent="#accordionFlushExample68">
+            <!-- Contenedor del código -->
+            <div id="codigo-container68">
+                <code id="codigo-text68">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio cuenta dígitos de un número n positivo\n";
+
+                            int n;
+                            std::cout &lt;&lt; "Ingrese el número positivo: ";
+                            std::cin &gt;&gt; n;
+
+                            int contadorDigitos = 0;
+                            while (n > 0) {
+                                contadorDigitos++;
+                                n /= 10;
+                            }
+
+                            std::cout &lt;&lt; "Cantidad de dígitos en el número: " &lt;&lt; contadorDigitos;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn68" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text68')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample69">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne69">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne69" aria-expanded="false" aria-controls="flush-collapseOne69">
+                Ejercicio parcial #16
+            </button>
+        </h2>
+        <div id="flush-collapseOne69" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne69" data-bs-parent="#accordionFlushExample69">
+            <!-- Contenedor del código -->
+            <div id="codigo-container69">
+                <code id="codigo-text69">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        #include &lt;string&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para acceder a una cuenta\n";
+
+                            std::string contraseña, intento;
+                            contraseña = "secreto";
+
+                            std::cout &lt;&lt; "Hola usuario 1, ingrese la contraseña\n";
+                            std::cin &gt;&gt; intento;
+
+                            while (intento != contraseña) {
+                                std::cout &lt;&lt; "Contraseña incorrecta, ingrese la contraseña\n";
+                                std::cin &gt;&gt; intento;
+                            }
+
+                            std::cout &lt;&lt; "Contraseña correcta, bienvenido";
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn69" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text69')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExample70">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne70">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne70" aria-expanded="false" aria-controls="flush-collapseOne70">
+                Ejercicio parcial #17
+            </button>
+        </h2>
+        <div id="flush-collapseOne70" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne70" data-bs-parent="#accordionFlushExample70">
+            <!-- Contenedor del código -->
+            <div id="codigo-container70">
+                <code id="codigo-text70">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Ejercicio para sumar una lista de numeros por teclado\n";
+
+                            int numeros, num = 0, suma = 0;
+
+                            std::cout &lt;&lt; "Ingrese un numero\n";
+                            std::cin &gt;&gt; numeros;
+
+                            while (num &gt; -1) {
+                                std::cout &lt;&lt; "Ingrese un numero\n";
+                                std::cin &gt;&gt; num;
+
+                                suma = numeros + num;
+                                numeros = suma;
+
+                                std::cout &lt;&lt; suma &lt;&lt; "\n";
+                            }
+
+                            std::cout &lt;&lt; "Proceso terminado";
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn70" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-text70')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- C++ Hangman Game Example -->
+<div class="accordion accordion-flush" id="accordionFlushExampleHangman">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOneHangman">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOneHangman" aria-expanded="false" aria-controls="flush-collapseOneHangman">
+                Ejercicio parcial #18
+            </button>
+        </h2>
+        <div id="flush-collapseOneHangman" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOneHangman" data-bs-parent="#accordionFlushExampleHangman">
+            <!-- Contenedor del código -->
+            <div id="codigo-containerHangman">
+                <code id="codigo-textHangman">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        #include &lt;string&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Bienvenido al juego de Ahorcado!\n";
+
+                            std::string palabraSecreta;
+                            std::cout &lt;&lt; "Ingresa la palabra a adivinar (en minúsculas): ";
+                            std::cin &gt;&gt; palabraSecreta;
+
+                            int intentos = 6;
+                            std::string palabraAdivinada(palabraSecreta.length(), '_');
+                            char letra;
+
+                            while (intentos &gt; 0 && palabraAdivinada != palabraSecreta) {
+                                std::cout &lt;&lt; "\nPalabra a adivinar: " &lt;&lt; palabraAdivinada &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "\nIntentos restantes: " &lt;&lt; intentos;
+                                std::cout &lt;&lt; "\nIngresa una letra: ";
+                                std::cin &gt;&gt; letra;
+
+                                bool letraAdivinada = false;
+
+                                for (size_t i = 0; i &lt; palabraSecreta.length(); i++) {
+                                    if (palabraSecreta[i] == letra) {
+                                        palabraAdivinada[i] = letra;
+                                        letraAdivinada = true;
+                                    }
+                                }
+
+                                if (!letraAdivinada) {
+                                    intentos--;
+                                    std::cout &lt;&lt; "La letra no está en la palabra. Intenta de nuevo.\n";
+                                }
+                            }
+
+                            if (palabraAdivinada == palabraSecreta) {
+                                std::cout &lt;&lt; "¡Felicidades! Has adivinado la palabra: " &lt;&lt; palabraSecreta;
+                            } else {
+                                std::cout &lt;&lt; "\nAgotaste tus intentos. La palabra secreta era: " &lt;&lt; palabraSecreta;
+                            }
+
+                            return 0;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btnHangman" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-textHangman')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Conteo de Números Pares e Impares en C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExampleCountNumbers">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOneCountNumbers">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOneCountNumbers" aria-expanded="false"
+                aria-controls="flush-collapseOneCountNumbers">
+                Ejercicio parcial #19
+            </button>
+        </h2>
+        <div id="flush-collapseOneCountNumbers" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOneCountNumbers" data-bs-parent="#accordionFlushExampleCountNumbers">
+            <!-- Contenedor del código -->
+            <div id="codigo-containerCountNumbers">
+                <code id="codigo-textCountNumbers">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            int numero, pares = 0, impares = 0;
+
+                            std::cout &lt;&lt; "Ingrese una serie de números. Ingrese 0 para terminar.\n";
+
+                            while (true) {
+                                std::cout &lt;&lt; "Ingrese un número: ";
+                                std::cin &gt;&gt; numero;
+
+                                if (numero == 0) {
+                                    break;
+                                }
+
+                                if (numero % 2 == 0) {
+                                    pares++;
+                                } else {
+                                    impares++;
+                                }
+                            }
+
+                            std::cout &lt;&lt; "Números pares ingresados: " &lt;&lt; pares &lt;&lt; '\n';
+                            std::cout &lt;&lt; "Números impares ingresados: " &lt;&lt; impares &lt;&lt; '\n';
+
+                            return 0;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btnCountNumbers" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-textCountNumbers')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cálculo de Precio con Descuento en C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExampleDiscount">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOneDiscount">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOneDiscount" aria-expanded="false" aria-controls="flush-collapseOneDiscount">
+                Ejercicio parcial #20
+            </button>
+        </h2>
+        <div id="flush-collapseOneDiscount" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOneDiscount" data-bs-parent="#accordionFlushExampleDiscount">
+            <!-- Contenedor del código -->
+            <div id="codigo-containerDiscount">
+                <code id="codigo-textDiscount">
+                    <pre>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            double precioOriginal, porcentajeDescuento;
+
+                            while (true) {
+                                std::cout &lt;&lt; "Ingrese el precio original del producto (o un precio negativo para salir): ";
+                                std::cin &gt;&gt; precioOriginal;
+
+                                if (precioOriginal < 0) {
+                                    break;
+                                }
+
+                                std::cout &lt;&lt; "Ingrese el porcentaje de descuento: ";
+                                std::cin &gt;&gt; porcentajeDescuento;
+
+                                double precioConDescuento = precioOriginal * (1 - porcentajeDescuento / 100);
+                                std::cout &lt;&lt; "Precio con descuento: $" &lt;&lt; precioConDescuento &lt;&lt; '\n';
+                            }
+
+                            std::cout &lt;&lt; "Fin del programa. Gracias por usarlo.\n";
+
+                            return 0;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btnDiscount" class="btn btn-primary"
+                onclick="copiarCodigo('codigo-textDiscount')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cálculo de Precio con Descuento en C++ -->
+<div class="accordion accordion-flush" id="accordionFlushExampleDiscount1">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOneDiscount1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOneDiscount1" aria-expanded="false" aria-controls="flush-collapseOneDiscount1">
+                Ejercicios en html, adjunto los links
+            </button>
+        </h2>
+        <div id="flush-collapseOneDiscount1" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOneDiscount1" data-bs-parent="#accordionFlushExampleDiscount1">
+            <!-- Contenedor del código -->
+            <div id="codigo-containerDiscount1">
+                <p id="codigo-textDiscount1">
+                    <pre>
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/IMC/index.html
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/triangulo.html 
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/edad.html 
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/membresia.html 
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/ejercicio%205.html 
+                        https://hellerproject.000webhostapp.com/html%20p2%20programacion/ejercicio%206.html
+
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

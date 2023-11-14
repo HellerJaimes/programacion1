@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repositorio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <script>
+        function copiarCodigo(codigoId) {
+            // Selecciona el texto del código
+            var codigoText = document.getElementById(codigoId);
+            var codigo = codigoText.textContent;
+            
+            // Crea un área de texto temporal
+            var tempInput = document.createElement("textarea");
+            tempInput.value = codigo;
+            document.body.appendChild(tempInput);
+            
+            // Selecciona y copia el contenido del área de texto temporal
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Puedes agregar lógica adicional, como mostrar un mensaje de éxito
+            alert("Código copiado al portapapeles");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">REPOSITORIO HELLER ANDRES JAIMES GELVEZ 01220371028</span>
+            <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1rem;" onclick="regresarPaginaPrincipal()">Regresar a la Página Principal</a>
+            <script>
+                function regresarPaginaPrincipal() {
+                    // Redirige a la página principal (puedes cambiar "index.html" por el nombre de tu archivo principal)
+                    window.location.href = "inicio.html";
+                }
+            </script>
+        </div>
+    </nav>
+    <div class="container mt-5" id="paginaPrincipal">
+        <h1 class="text-center">Bienvenido Usuario al primer parcial, acontinuación tendrá los ejercicios realizados en clase</h1>
+        <br>
+        <br>
+        <br>
+        <!-- Ejercicio p1 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Ejercicio Parcial #1
+                </button>
+            </h2>
+            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1"
+            data-bs-parent="#accordionFlushExample1">
+            <!-- Contenedor del código -->
+            <div id="codigo-container1">
+                <code id="codigo-text1">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+                        
+                        int main() {
+                            
+                            int r, h;
+                            
+                            std::cout &lt;&lt; "Algoritmo para hallar el area y volumen de un cilindro\n";
+                            
+                            std::cout &lt;&lt; "Ingrese el radio del cilindro\n";
+                            
+                            std::cin &gt;&gt; r;
+                            
+                            std::cout &lt;&lt; "Ingrese la altura del cilindro\n";
+                            
+                            std::cin &gt;&gt; h;
+                            
+                            double Areac, Volumenc;
+                            
+                            Areac = 2 * (3.141592) * r * (r + h);
+                            
+                            Volumenc = (3.141592) * (r * r) * h;
+                            
+                            std::cout &lt;&lt; "El Area del cilindro es: " &lt;&lt; Areac;
+                            
+                            std::cout &lt;&lt; "\nEl Volumen del cilindro es: " &lt;&lt; Volumenc;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn1" class="btn btn-primary"
+            onclick="copiarCodigo('codigo-text1')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejercicio 2 -->
+<div class="accordion accordion-flush" id="accordionFlushExample2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
+            Ejercicio Parcial #2
+        </button>
+    </h2>
+    <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2"
+    data-bs-parent="#accordionFlushExample2">
+    <!-- Contenedor del código -->
+    <div id="codigo-container2">
+        <code id="codigo-text2">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    
+                    int R1, R2, a, h;
+                    
+                    std::cout &lt;&lt; "Algoritmo para hallar el area y volumen de un cono circular "
+                    "truncado o tronco de cono circular recto\n";
+                    
+                    std::cout &lt;&lt; "Ingrese el radio mayor\n";
+                    
+                    std::cin &gt;&gt; R1;
+                    
+                    std::cout &lt;&lt; "Ingrese la radio menor\n";
+                    
+                    std::cin &gt;&gt; R2;
+                    
+                    std::cout &lt;&lt; "Ingrese la generatriz\n";
+                    
+                    std::cin &gt;&gt; a;
+                    
+                    std::cout &lt;&lt; "Ingrese la hipotenusa\n";
+                    
+                    std::cin &gt;&gt; h;
+                    
+                    double AreaCono, VolumenCono;
+                    
+                    AreaCono = 3.141592 * (R1 * R1 + R2 * R2 + a * (R1 + R2));
+                    
+                    VolumenCono = (h * 3.141592 / 3) * ((R1 + R1) + (R2 * R2) + (R1 * R2));
+                    
+                    std::cout &lt;&lt; "El Area del cono truncado o circular recto: " &lt;&lt; AreaCono;
+                    
+                    std::cout &lt;&lt; "\nEl Volumen del cono truncado o circular: " &lt;&lt; VolumenCono;
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn2" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text2')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 3 -->
+<div class="accordion accordion-flush" id="accordionFlushExample3">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne3">
+            Ejercicio Parcial #3
+        </button>
+    </h2>
+    <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3"
+    data-bs-parent="#accordionFlushExample3">
+    <!-- Contenedor del código -->
+    <div id="codigo-container3">
+        <code id="codigo-text3">
+            <pre>
+                #include &lt;iostream&gt;
+                using namespace std;
+                
+                int main() {
+                    
+                    double V, Vo, Vs, f;
+                    
+                    int r;
+                    V = 343;
+                    std::cout &lt;&lt; "Algoritmo diseñado para simular el efecto dopler\n";
+                    std::cout &lt;&lt; "Ingrese la velocidad del observador\n";
+                    std::cin &gt;&gt; Vo;
+                    std::cout &lt;&lt; "Ingrese la velocidad de la fuente\n";
+                    std::cin &gt;&gt; Vs;
+                    std::cout &lt;&lt; "Ingrese la frecuencia de la fuente\n";
+                    std::cin &gt;&gt; f;
+                    
+                    std::cout &lt;&lt; "Por favor selecciones el caso que quiera simular en base a los siguientes escenarios\n";
+                    
+                    std::cout &lt;&lt; "1) El emisor se acerca al receptor\n2) El emisor se aleja del receptor\n3) Los dos se mueven hacia el mismo lado\n4) Los dos se mueven en sentido contrario\n";
+                    
+                    std::cin &gt;&gt; r;
+                    
+                    double fo;
+                    
+                    switch (r) {
+                        
+                        case 1:
+                        
+                        fo = f * (V / (V - Vs));
+                        
+                        std::cout &lt;&lt; "En caso de que el emisor se acerque al receptor con los valores dados la frecuencia será iqual a: "<< fo;
+                        
+                        break;
+                        case 2:
+                        fo = (V / (V + Vs));
+                        std::cout &lt;&lt; "En caso de que el emisor se aleje al receptor con los valores dados la frecuencia será igual a: "<< fo;
+                        break;
+                        case 3:
+                        fo = f * ((V + Vo) / (V - Vs));
+                        
+                        std::cout &lt;&lt; "En caso de que el emisor y receptor se acerquen mutuamente,la frecuencia será igual a: " &lt;&lt; fo;
+                        break;
+                        case 4:
+                        fo = f * ((V - Vo) / (V + Vs));
+                        std::cout &lt;&lt; "En caso de que el emisor y el receptor se alejen mutuamente dados, la frecuencia será igual a: " &lt;&lt; fo;
+                        
+                        default:
+                        std::cout &lt;&lt; "Elija un numero entre el 1 y 4";
+                    }
+                }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn3" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text3')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 4 -->
+<div class="accordion accordion-flush" id="accordionFlushExample4">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne4">
+            Ejercicio Parcial #4
+        </button>
+    </h2>
+    <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4"
+    data-bs-parent="#accordionFlushExample4">
+    <!-- Contenedor del código -->
+    <div id="codigo-container4">
+        <code id="codigo-text4">
+            <pre>
+                #include &lt;iostream&gt; 
+                using namespace std; 
+                int main(){ 
+                    
+                    std::cout &lt;&lt; "Algoritmo encargado de obtener la aceleracion y fuerza de las masas\n"; 
+                    
+                    double caja1,caja2, fuerza; 
+                    std::cout &lt;&lt; "Ingrese el peso de la caja 1\n"; 
+                    std::cin &gt;&gt; caja1; 
+                    std::cout &lt;&lt; "Ingrese el peso de la caja 2\n"; 
+                    std::cin &gt;&gt; caja2; 
+                    fuerza=55; 
+                    
+                    std::cout &lt;&lt; "Cual es la aceleracion de cada masa? \n"; 
+                    
+                    double a; 
+                    a=fuerza/(caja1+caja2); 
+                    
+                    std::cout &lt;&lt; "Al estar juntos los objetos sin rozamiento actuan como un solo objeto por lo que se suman los pesos lo cual nos da una aceleracion igual a: "&lt;&lt;a&lt;&lt;" m/s”2\n"; 
+                    
+                    std::cout &lt;&lt; "Qué fuerza ejercerá cada caja sobre la otra?\n"; 
+                    std::cout &lt;&lt; "Rta: La fuerza que ejercerá que ejerceran las cajas unas sobre otras son opuestas gracias a la 3ra ley de newton, una ejerce una fuerza hacia la derecho intentando mover la caja y la otra fuerza que repele esa fuerza como reaccion"; 
+                }
+            </code>
+        </div>
+        <!-- Botón para copiar el código -->
+        <button id="copiar-btn4" class="btn btn-primary"
+        onclick="copiarCodigo('codigo-text4')">Copiar Código</button>
+    </div>
+</div>
+</div>    
+
+<!-- Ejercicio 5 -->
+<div class="accordion accordion-flush" id="accordionFlushExample5">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne5" aria-expanded="false" aria-controls="flush-collapseOne5">
+            Ejercicio Parcial #5
+        </button>
+    </h2>
+    <div id="flush-collapseOne5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne5"
+    data-bs-parent="#accordionFlushExample5">
+    <!-- Contenedor del código -->
+    <div id="codigo-container5">
+        <code id="codigo-text5">
+            <pre>
+                #include &lt;iostream&gt; 
+                
+                using namespace std; 
+                
+                int main(){ 
+                    
+                    std::cout &lt;&lt; "Algoritmo encargado de calcular el consumo calorico necesario para mantener su peso\n"; 
+                    
+                    double peso, altura, actividad,MBH,MBO,r; 
+                    
+                    int edad; 
+                    
+                    std::cout &lt;&lt; "Ingrese su peso en kilos\n"; 
+                    
+                    std::cin &gt;&gt; peso; 
+                    
+                    std::cout &lt;&lt; "Ingrese su altura en centimetros \n"; 
+                    
+                    std::cin &gt;&gt; altura; 
+                    
+                    std::cout &lt;&lt; "Ingrese su edad\n"; 
+                    
+                    std::cin &gt;&gt; edad; 
+                    
+                    std::cout &lt;&lt; "Ingrese su actividad fisica en horas por semanal\n"; 
+                    
+                    std::cin &gt;&gt; actividad; 
+                    
+                    std::cout &lt;&lt; "Ingrese 1 si es hombre o 0 si es mujer\n"; 
+                    
+                    std::cin &gt;&gt; r; 
+                    
+                    if (r==1){ 
+                        
+                        switch(edad){ 
+                            
+                            case 0 ... 2: 
+                            MBH=66+(13.7*peso)+(5*altura)-(6.8+edad); 
+                            MBO=(60.9*peso-(54)); 
+                            break; 
+                            case 3 ... 10: 
+                            MBH=66+(13.7*peso)+(5*altura)-(6.8*edad); 
+                            MBO=(22.7*peso+(495)); 
+                            break; 
+                            case 11 ... 18: 
+                            MBH=66+(13.7*peso )+(5*altura)-(6.8*edad); 
+                            MBO=(17.5*peso+(651)); 
+                            break; 
+                            case 19 ... 30: 
+                            MBH=66+(13.7*peso)+(5*altura)-(6.8*edad); 
+                            MBO=(15.3*peso+(679)); 
+                            break; 
+                            case 31 ... 60: 
+                            MBH=66+(13.7*peso )+(5*altura)-(6.8*edad); 
+                            MBO=(11.6*peso+(879)); 
+                            break; 
+                            case 61 ... 114: 
+                            MBH=66+(13.7*peso)+(5*altura)-(6.8*edad); 
+                            MBO=(13.5*peso+(478)); 
+                            break; 
+                            default: 
+                            std::cout &lt;&lt; "Digite un numero legible 1 o 0"; 
+                        } 
+                    } 
+                    
+                    if (r==0){ 
+                        switch(edad){ 
+                            case 0 ... 2: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7*edad); 
+                            MBO=(61*peso-(51) ); 
+                            break; 
+                            case 3 ... 10: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7*edad); 
+                            MBO=(22.5*peso+(499)); 
+                            break; 
+                            case 11 ... 18: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7*edad); 
+                            MBO=(12.2*peso+(746)); 
+                            break; 
+                            case 19 ... 30: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7+edad); 
+                            MBO=(14.7*peso+(496) ); 
+                            break; 
+                            case 31 ... 60: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7*edad); 
+                            MBO=(8.7*peso+(829)); 
+                            break; 
+                            case 61 ... 114: 
+                            MBH=655+(9.6*peso)+(1.85*altura)-(4.7*+edad); 
+                            MBO=(10.5*peso+(596)); 
+                            break; 
+                            default: 
+                            cout &lt;&lt; "Digite un numero legible 1 o 0"; 
+                        } 
+                    } 
+                    
+                    std::cout &lt;&lt; "Segun la ecuacion de harris benedict el consumo calorico requerido segun sus datos es: "&lt;&lt;MBH; 
+                    
+                    std::cout &lt;&lt; "\nsegun la ecuacion de la OMS el consumo calorico requerido segun sus datos es: "&lt;&lt;MBO; 
+                    
+                } 
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn5" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text5')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+<!-- Ejercicio 6 -->
+<div class="accordion accordion-flush" id="accordionFlushExample6">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne6" aria-expanded="false" aria-controls="flush-collapseOne6">
+            Ejercicio parcial #6
+        </button>
+    </h2>
+    <div id="flush-collapseOne6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne6"
+    data-bs-parent="#accordionFlushExample6">
+    <!-- Contenedor del código -->
+    <div id="codigo-container6">
+        <code id="codigo-text6">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                using namespace std;
+                
+                int main() {
+                    
+                    std::cout &lt;&lt; "Algoritmo encargado de calcular el indicador de gordura\n";
+                    
+                    double peso, altura, IMC;
+                    
+                    std::cout &lt;&lt; "Ingrese su peso en kilos \n";
+                    
+                    std::cin &gt;&gt; peso;
+                    
+                    std::cout &lt;&lt; "Ingrese su altura en metros\n";
+                    
+                    std::cin &gt;&gt; altura;
+                    
+                    IMC = peso / (altura * altura);
+                    
+                    std::cout &lt;&lt; "El IMC es de: " &lt;&lt; IMC &lt;&lt; "\n";
+                    
+                    if (IMC >= 0.66 && IMC &lt;= 18.4) {
+                        
+                        std::cout &lt;&lt; "Usted tiene bajo peso\n";
+                        
+                    }
+                    
+                    else if (IMC >= 18.5 && IMC &lt;= 24.9) {
+                        
+                        std::cout &lt;&lt; "Usted tiene un peso normal \n";
+                        
+                    }
+                    
+                    else if (IMC >= 25 && IMC &lt;= 29.9) {
+                        
+                        std::cout &lt;&lt; "Usted tiene sobrepeso\n";
+                        
+                    }
+                    
+                    else if (IMC >= 30 && IMC &lt;= 34.9) {
+                        
+                        std::cout &lt;&lt; "Usted tiene obesidad tipo I\n";
+                        
+                    }
+                    
+                    else if (IMC >= 35 && IMC &lt;= 39.9) {
+                        
+                        std::cout &lt;&lt; "Usted tiene obesidad tipo II\n";
+                        
+                    }
+                    
+                    else if (IMC >= 40 && IMC &lt;= 49.9) {
+                        
+                        std::cout &lt;&lt; "Usted tiene obesidad tipo III\n";
+                        
+                    }
+                    
+                    else if (IMC >= 50) {
+                        
+                        std::cout &lt;&lt; "Usted tiene obesidad tipo IV\n";
+                        
+                    }
+                    
+                    else {
+                        
+                        cout &lt;&lt; "Hubo un error al calcular el IMC, asigne datos validos";
+                    }
+                    
+                    return 0;
+                }
+            </pre>  
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn6" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text6')">Copiar Código</button>
+</div>
+</div>
+</div>                                    
+<!-- Ejercicio 7 -->
+<div class="accordion accordion-flush" id="accordionFlushExample7">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne7" aria-expanded="false" aria-controls="flush-collapseOne7">
+            Ejercicio Parcial #7
+        </button>
+    </h2>
+    <div id="flush-collapseOne7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne7"
+    data-bs-parent="#accordionFlushExample7">
+    <!-- Contenedor del código -->
+    <div id="codigo-container7">
+        <code id="codigo-text7">
+            <pre>
+                #include &lt;iostream&gt;
+                
+                using namespace std;
+                
+                int main(){ 
+                    std::cout &lt;&lt; "Algoritmo encargado de determinar la variacion de peso acorde a la semanas de gestacion\n"; 
+                    double pesoprevio, pesoactual,semana, ganancia; 
+                    std::cout &lt;&lt; "Ingrese su peso previo al embarazo\n"; 
+                    std::cin &gt;&gt; pesoprevio; 
+                    std::cout &lt;&lt; "Ingrese su peso actual\n"; 
+                    std::cin &gt;&gt; pesoactual; 
+                    std::cout &lt;&lt; "Ingrese la semana de embarazo actual\n"; 
+                    std::cin &gt;&gt; semana; 
+                    ganancia=pesoactual-pesoprevio; 
+                    if (semana &gt;= 0 && semana &lt;= 12) { 
+                        if (ganancia &gt;= 0 && ganancia &lt;= 1.4) { 
+                            std::cout &lt;&lt; "Usted tiene una ganancia de peso baja\n"; 
+                        } 
+                        else if (ganancia &gt;= 1.5 && ganancia &lt;= 2) { 
+                            std::cout &lt;&lt; "Usted tiene una ganancia de peso normal\n"; 
+                        } 
+                        else if (ganancia &gt;= 3 && ganancia &lt;= 9) { 
+                            std::cout &lt;&lt; "Usted tiene una ganancia de peso elevada\n"; 
+                        } 
+                        else { 
+                            std::cout &lt;&lt; "Valor de ganancia de peso no válido, ingrese datos validos\n"; 
+                        } 
+                    } 
+                    else if (semana &gt;= 13 && semana &lt;= 24) { 
+                        if (ganancia &gt;= 0 && ganancia &lt;= 2) { 
+                            std::cout &lt;&lt; "Usted tiene una ganancia de peso baja\n"; 
+                        }
+                    }
+                }
+                
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn7" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text7')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+</body>
+</html>

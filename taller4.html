@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repositorio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <script>
+        function copiarCodigo(codigoId) {
+            // Selecciona el texto del código
+            var codigoText = document.getElementById(codigoId);
+            var codigo = codigoText.textContent;
+            
+            // Crea un área de texto temporal
+            var tempInput = document.createElement("textarea");
+            tempInput.value = codigo;
+            document.body.appendChild(tempInput);
+            
+            // Selecciona y copia el contenido del área de texto temporal
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Puedes agregar lógica adicional, como mostrar un mensaje de éxito
+            alert("Código copiado al portapapeles");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">REPOSITORIO HELLER ANDRES JAIMES GELVEZ 01220371028</span>
+            <a href="#" class="btn btn-primary" style="--bs-btn-padding-y: 0.5rem; --bs-btn-padding-x: 1rem;" onclick="regresarPaginaPrincipal()">Regresar</a>
+            <script>
+                function regresarPaginaPrincipal() {
+                    // Redirige a la página principal (puedes cambiar "index.html" por el nombre de tu archivo principal)
+                    window.location.href = "corte3.html";
+                }
+            </script>
+        </div>
+    </nav>
+    <div class="container mt-5" id="paginaPrincipal">
+        <h1 class="text-center">Bienvenido Usuario al taller 2, acontinuación tendrá los ejercicios realizados en clase</h1>
+        <br>
+        <br>
+        <br>
+        <!-- Ejercicio p1 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Ejercicio #1
+                </button>
+            </h2>
+            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1"
+            data-bs-parent="#accordionFlushExample1">
+            <!-- Contenedor del código -->
+            <div id="codigo-container1">
+                <code id="codigo-text1">
+                    <pre>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+
+                        int main() {
+                            int m, n, p;
+
+                            // Ingresar las dimensiones de las matrices
+                            cout &lt;&lt; "Ingrese las dimensiones de la matriz A (m x n): ";
+                            cin &gt;&gt; m &gt;&gt; n;
+
+                            cout &lt;&lt; "Ingrese las dimensiones de la matriz B (n x p): ";
+                            cin &gt;&gt; n &gt;&gt; p;
+
+                            // Verificar si las dimensiones son adecuadas para la multiplicación
+                            if (n &lt;= 0 || m &lt;= 0 || p &lt;= 0) {
+                                cout &lt;&lt; "Las dimensiones de las matrices deben ser números positivos." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Ingresar elementos de la matriz A
+                            cout &lt;&lt; "Ingrese los elementos de la matriz A:" &lt;&lt; endl;
+                            int A[m][n];
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "A[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; A[i][j];
+                                }
+                            }
+
+                            // Ingresar elementos de la matriz B
+                            cout &lt;&lt; "Ingrese los elementos de la matriz B:" &lt;&lt; endl;
+                            int B[n][p];
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; p; j++) {
+                                    cout &lt;&lt; "B[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; B[i][j];
+                                }
+                            }
+
+                            // Verificar si las dimensiones son adecuadas para la multiplicación
+                            if (n != n) {
+                                cout &lt;&lt; "Las matrices no tienen dimensiones adecuadas para la multiplicación." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Calcular el producto de las matrices A y B
+                            int C[m][p];
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; p; j++) {
+                                    C[i][j] = 0;
+                                    for (int k = 0; k &lt; n; k++) {
+                                        C[i][j] += A[i][k] * B[k][j];
+                                    }
+                                }
+                            }
+
+                            // Mostrar el resultado
+                            cout &lt;&lt; "El producto de las matrices A y B (A * B) es:" &lt;&lt; endl;
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; p; j++) {
+                                    cout &lt;&lt; C[i][j] &lt;&lt; " ";
+                                }
+                                cout &lt;&lt; endl;
+                            }
+
+                            return 0;
+                        }
+                    </pre>
+                </code>
+            </div>
+            <!-- Botón para copiar el código -->
+            <button id="copiar-btn1" class="btn btn-primary"
+            onclick="copiarCodigo('codigo-text1')">Copiar Código</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ejercicio 2 -->
+<div class="accordion accordion-flush" id="accordionFlushExample2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
+            Ejercicio #2
+        </button>
+    </h2>
+    <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2"
+    data-bs-parent="#accordionFlushExample2">
+    <!-- Contenedor del código -->
+    <div id="codigo-container2">
+        <code id="codigo-text2">
+            <pre>
+                #include &lt;iostream&gt;
+                        #include &lt;cmath&gt;
+                        using namespace std;
+
+                        const double EPSILON = 1e-10;  // Pequeño valor para comparaciones de punto flotante
+
+                        // Función para imprimir una matriz
+                        void imprimirMatriz(double mat[][10], int n) {
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; mat[i][j] &lt;&lt; " ";
+                                }
+                                cout &lt;&lt; endl;
+                            }
+                        }
+
+                        // Función para encontrar la matriz inversa
+                        bool encontrarMatrizInversa(double A[][10], double inversa[][10], int n) {
+                            // Copiar la matriz original a la matriz aumentada
+                            double aumentada[10][20];
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    aumentada[i][j] = A[i][j];
+                                    aumentada[i][j + n] = (i == j) ? 1 : 0;
+                                }
+                            }
+
+                            // Hacer operaciones para convertir A en I y guardar resultado en inversa
+                            for (int i = 0; i &lt; n; i++) {
+                                // Encontrar la fila con el elemento diagonal más grande
+                                int filaMax = i;
+                                for (int j = i + 1; j &lt; n; j++) {
+                                    if (fabs(aumentada[j][i]) &gt; fabs(aumentada[filaMax][i])) {
+                                        filaMax = j;
+                                    }
+                                }
+
+                                // Intercambiar filas si es necesario
+                                if (fabs(aumentada[filaMax][i]) &lt; EPSILON) {
+                                    // La matriz no es inversible
+                                    cout &lt;&lt; "La matriz no es inversible." &lt;&lt; endl;
+                                    return false;
+                                }
+
+                                swap(aumentada[i], aumentada[filaMax]);
+                                double factor = aumentada[i][i];
+
+                                // Hacer 1 en la diagonal principal
+                                for (int j = 0; j &lt; 2 * n; j++) {
+                                    aumentada[i][j] /= factor;
+                                }
+
+                                // Hacer 0 por encima y por debajo de la diagonal principal
+                                for (int j = 0; j &lt; n; j++) {
+                                    if (i != j) {
+                                        factor = aumentada[j][i];
+                                        for (int k = 0; k &lt; 2 * n; k++) {
+                                            aumentada[j][k] -= factor * aumentada[i][k];
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Extraer la matriz inversa de la parte derecha [I | A^(-1)]
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    inversa[i][j] = aumentada[i][j + n];
+                                }
+                            }
+
+                            return true;
+                        }
+
+                        int main() {
+                            int n;
+
+                            // Ingresar la dimensión de la matriz cuadrada
+                            cout &lt;&lt; "Ingrese la dimensión n de la matriz cuadrada A (n x n): ";
+                            cin &gt;&gt; n;
+
+                            // Verificar si la dimensión es válida
+                            if (n &lt;= 0 || n &gt; 10) {
+                                cout &lt;&lt; "La dimensión de la matriz no es válida." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Ingresar elementos de la matriz A
+                            cout &lt;&lt; "Ingrese los elementos de la matriz A:" &lt;&lt; endl;
+                            double A[10][10];
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "A[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; A[i][j];
+                                }
+                            }
+
+                            // Encontrar la matriz inversa
+                            double inversa[10][10];
+                            if (encontrarMatrizInversa(A, inversa, n)) {
+                                // Mostrar la matriz inversa
+                                cout &lt;&lt; "La matriz inversa A^(-1) es:" &lt;&lt; endl;
+                                imprimirMatriz(inversa, n);
+                            }
+
+                            return 0;
+                        }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn2" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text2')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 3 -->
+<div class="accordion accordion-flush" id="accordionFlushExample3">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne3">
+            Ejercicio #3
+        </button>
+    </h2>
+    <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3"
+    data-bs-parent="#accordionFlushExample3">
+    <!-- Contenedor del código -->
+    <div id="codigo-container3">
+        <code id="codigo-text3">
+            <pre>
+                #include &lt;iostream&gt;
+                        #include &lt;cmath&gt;
+                        using namespace std;
+
+                        // Función para imprimir una matriz
+                        void imprimirMatriz(double mat[][10], int n) {
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; mat[i][j] &lt;&lt; " ";
+                                }
+                                cout &lt;&lt; endl;
+                            }
+                        }
+
+                        // Función para calcular el determinante de una matriz
+                        double calcularDeterminante(double mat[][10], int n) {
+                            double det = 1;
+                            for (int i = 0; i &lt; n; i++) {
+                                int filaMax = i;
+                                for (int j = i + 1; j &lt; n; j++) {
+                                    if (fabs(mat[j][i]) &gt; fabs(mat[filaMax][i])) {
+                                        filaMax = j;
+                                    }
+                                }
+
+                                if (fabs(mat[filaMax][i]) &lt; 1e-10) {
+                                    return 0; // La matriz es singular (no invertible)
+                                }
+
+                                if (filaMax != i) {
+                                    swap(mat[i], mat[filaMax]);
+                                    det *= -1; // Cambio de signo por intercambio de filas
+                                }
+
+                                for (int j = i + 1; j &lt; n; j++) {
+                                    double factor = mat[j][i] / mat[i][i];
+                                    for (int k = i; k &lt; n; k++) {
+                                        mat[j][k] -= factor * mat[i][k];
+                                    }
+                                }
+                            }
+
+                            for (int i = 0; i &lt; n; i++) {
+                                det *= mat[i][i];
+                            }
+
+                            return det;
+                        }
+
+                        // Función para calcular el cofactor de un elemento específico
+                        double calcularCofactor(double mat[][10], int n, int fila, int columna) {
+                            double cofactorMat[10][10];
+
+                            int cofactorFila = 0;
+                            for (int i = 0; i &lt; n; i++) {
+                                if (i == fila) continue;
+
+                                int cofactorColumna = 0;
+                                for (int j = 0; j &lt; n; j++) {
+                                    if (j == columna) continue;
+
+                                    cofactorMat[cofactorFila][cofactorColumna] = mat[i][j];
+                                    cofactorColumna++;
+                                }
+
+                                cofactorFila++;
+                            }
+
+                            // Calcular el determinante del cofactor
+                            double detCofactor = calcularDeterminante(cofactorMat, n - 1);
+
+                            // Calcular el cofactor
+                            int signo = ((fila + columna) % 2 == 0) ? 1 : -1;
+                            double cofactor = signo * detCofactor;
+
+                            return cofactor;
+                        }
+
+                        int main() {
+                            int n;
+
+                            // Ingresar la dimensión de la matriz cuadrada
+                            cout &lt;&lt; "Ingrese la dimensión n de la matriz cuadrada A (n x n): ";
+                            cin &gt;&gt; n;
+
+                            // Verificar si la dimensión es válida
+                            if (n &lt;= 0 || n &gt; 10) {
+                                cout &lt;&lt; "La dimensión de la matriz no es válida." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Ingresar elementos de la matriz A
+                            cout &lt;&lt; "Ingrese los elementos de la matriz A:" &lt;&lt; endl;
+                            double A[10][10];
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "A[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; A[i][j];
+                                }
+                            }
+
+                            // Calcular y mostrar el determinante de la matriz A
+                            double determinante = calcularDeterminante(A, n);
+                            cout &lt;&lt; "El determinante de la matriz A es: " &lt;&lt; determinante &lt;&lt; endl;
+
+                            // Ingresar la posición del elemento para calcular el cofactor
+                            int fila, columna;
+                            cout &lt;&lt; "Ingrese la fila del elemento para calcular el cofactor: ";
+                            cin &gt;&gt; fila;
+                            cout &lt;&lt; "Ingrese la columna del elemento para calcular el cofactor: ";
+                            cin &gt;&gt; columna;
+
+                            // Verificar si la posición es válida
+                            if (fila &lt; 0 || fila &gt;= n || columna &lt; 0 || columna &gt;= n) {
+                                cout &lt;&lt; "La posición del elemento no es válida." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Calcular y mostrar el cofactor del elemento especificado
+                            double cofactor = calcularCofactor(A, n, fila, columna);
+                            cout &lt;&lt; "El cofactor del elemento en la posición (" &lt;&lt; fila &lt;&lt; ", " &lt;&lt; columna &lt;&lt; ") es: " &lt;&lt; cofactor &lt;&lt; endl;
+
+                            return 0;
+                        }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn3" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text3')">Copiar Código</button>
+</div>
+</div>
+</div>
+
+<!-- Ejercicio 4 -->
+<div class="accordion accordion-flush" id="accordionFlushExample4">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne4">
+            Ejercicio #4
+        </button>
+    </h2>
+    <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4"
+    data-bs-parent="#accordionFlushExample4">
+    <!-- Contenedor del código -->
+    <div id="codigo-container4">
+        <code id="codigo-text4">
+            <pre>
+                #include &lt;iostream&gt;
+                        using namespace std;
+
+                        // Función para imprimir una matriz
+                        void imprimirMatriz(int mat[][10], int n) {
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; mat[i][j] &lt;&lt; " ";
+                                }
+                                cout &lt;&lt; endl;
+                            }
+                        }
+
+                        // Función para calcular la traspuesta de una matriz
+                        void calcularTraspuesta(int A[][10], int traspuesta[][10], int n) {
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    traspuesta[j][i] = A[i][j];
+                                }
+                            }
+                        }
+
+                        // Función para multiplicar dos matrices
+                        void multiplicarMatrices(int A[][10], int B[][10], int resultado[][10], int n) {
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    resultado[i][j] = 0;
+                                    for (int k = 0; k &lt; n; k++) {
+                                        resultado[i][j] += A[i][k] * B[k][j];
+                                    }
+                                }
+                            }
+                        }
+
+                        int main() {
+                            int n;
+
+                            // Ingresar la dimensión de la matriz cuadrada
+                            cout &lt;&lt; "Ingrese la dimensión n de la matriz cuadrada A (n x n): ";
+                            cin &gt;&gt; n;
+
+                            // Verificar si la dimensión es válida
+                            if (n &lt;= 0 || n &gt; 10) {
+                                cout &lt;&lt; "La dimensión de la matriz no es válida." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Ingresar elementos de la matriz A
+                            cout &lt;&lt; "Ingrese los elementos de la matriz A:" &lt;&lt; endl;
+                            int A[10][10];
+                            for (int i = 0; i &lt; n; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "A[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; A[i][j];
+                                }
+                            }
+
+                            // Calcular y mostrar la traspuesta de la matriz A
+                            int traspuesta[10][10];
+                            calcularTraspuesta(A, traspuesta, n);
+                            cout &lt;&lt; "La traspuesta de la matriz A es:" &lt;&lt; endl;
+                            imprimirMatriz(traspuesta, n);
+
+                            // Calcular y mostrar el resultado de A * A^T
+                            int resultado[10][10];
+                            multiplicarMatrices(A, traspuesta, resultado, n);
+                            cout &lt;&lt; "El resultado de A * A^T es:" &lt;&lt; endl;
+                            imprimirMatriz(resultado, n);
+
+                            return 0;
+                        }
+            </pre>
+            </code>
+        </div>
+        <!-- Botón para copiar el código -->
+        <button id="copiar-btn4" class="btn btn-primary"
+        onclick="copiarCodigo('codigo-text4')">Copiar Código</button>
+    </div>
+</div>
+</div>    
+
+<!-- Ejercicio 5 -->
+<div class="accordion accordion-flush" id="accordionFlushExample5">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne5" aria-expanded="false" aria-controls="flush-collapseOne5">
+            Ejercicio #5
+        </button>
+    </h2>
+    <div id="flush-collapseOne5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne5"
+    data-bs-parent="#accordionFlushExample5">
+    <!-- Contenedor del código -->
+    <div id="codigo-container5">
+        <code id="codigo-text5">
+            <pre>
+                #include &lt;iostream&gt;
+                        using namespace std;
+
+                        // Función para imprimir una matriz
+                        void imprimirMatriz(int mat[][10], int filas, int columnas) {
+                            for (int i = 0; i &lt; filas; i++) {
+                                for (int j = 0; j &lt; columnas; j++) {
+                                    cout &lt;&lt; mat[i][j] &lt;&lt; " ";
+                                }
+                                cout &lt;&lt; endl;
+                            }
+                        }
+
+                        // Función para multiplicar una matriz por un escalar
+                        void multiplicarPorEscalar(int mat[][10], int filas, int columnas, int escalar, int resultado[][10]) {
+                            for (int i = 0; i &lt; filas; i++) {
+                                for (int j = 0; j &lt; columnas; j++) {
+                                    resultado[i][j] = escalar * mat[i][j];
+                                }
+                            }
+                        }
+
+                        // Función para sumar dos matrices
+                        void sumarMatrices(int mat1[][10], int mat2[][10], int filas, int columnas, int resultado[][10]) {
+                            for (int i = 0; i &lt; filas; i++) {
+                                for (int j = 0; j &lt; columnas; j++) {
+                                    resultado[i][j] = mat1[i][j] + mat2[i][j];
+                                }
+                            }
+                        }
+
+                        int main() {
+                            int m, n;
+
+                            // Ingresar las dimensiones de las matrices A, B y C
+                            cout &lt;&lt; "Ingrese el número de filas (m): ";
+                            cin &gt;&gt; m;
+                            cout &lt;&lt; "Ingrese el número de columnas (n): ";
+                            cin &gt;&gt; n;
+
+                            // Verificar si las dimensiones son válidas
+                            if (m &lt;= 0 || n &lt;= 0 || m &gt; 10 || n &gt; 10) {
+                                cout &lt;&lt; "Las dimensiones de las matrices no son válidas." &lt;&lt; endl;
+                                return 1;
+                            }
+
+                            // Ingresar elementos de la matriz A
+                            cout &lt;&lt; "Ingrese los elementos de la matriz A:" &lt;&lt; endl;
+                            int A[10][10];
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "A[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; A[i][j];
+                                }
+                            }
+
+                            // Ingresar elementos de la matriz B
+                            cout &lt;&lt; "Ingrese los elementos de la matriz B:" &lt;&lt; endl;
+                            int B[10][10];
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "B[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; B[i][j];
+                                }
+                            }
+
+                            // Ingresar elementos de la matriz C
+                            cout &lt;&lt; "Ingrese los elementos de la matriz C:" &lt;&lt; endl;
+                            int C[10][10];
+                            for (int i = 0; i &lt; m; i++) {
+                                for (int j = 0; j &lt; n; j++) {
+                                    cout &lt;&lt; "C[" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: ";
+                                    cin &gt;&gt; C[i][j];
+                                }
+                            }
+
+                            // Ingresar el escalar k
+                            int k;
+                            cout &lt;&lt; "Ingrese el escalar k: ";
+                            cin &gt;&gt; k;
+
+                            // Realizar las operaciones y mostrar los resultados
+                            int resultadoEscalar[10][10], resultadoSumaAB[10][10], resultadoSumaBC[10][10];
+
+                            multiplicarPorEscalar(A, m, n, k, resultadoEscalar);
+                            cout &lt;&lt; "El resultado de k * A es:" &lt;&lt; endl;
+                            imprimirMatriz(resultadoEscalar, m, n);
+
+                            sumarMatrices(A, B, m, n, resultadoSumaAB);
+                            cout &lt;&lt; "El resultado de A + B es:" &lt;&lt; endl;
+                            imprimirMatriz(resultadoSumaAB, m, n);
+
+                            sumarMatrices(B, C, m, n, resultadoSumaBC);
+                            cout &lt;&lt; "El resultado de B + C es:" &lt;&lt; endl;
+                            imprimirMatriz(resultadoSumaBC, m, n);
+
+                            return 0;
+                        }
+            </pre>
+        </code>
+    </div>
+    <!-- Botón para copiar el código -->
+    <button id="copiar-btn5" class="btn btn-primary"
+    onclick="copiarCodigo('codigo-text5')">Copiar Código</button>
+</div>
+</div>
+</div> 
+
+</body>
+</html>
